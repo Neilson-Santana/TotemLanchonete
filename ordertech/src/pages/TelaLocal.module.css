@@ -1,0 +1,51 @@
+.telaLocal {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+  background: #f4f1e8;
+}
+
+.opcoesLocal {
+  display: flex;
+  width: min(100%, 760px);
+  justify-content: center;
+  gap: 24px;
+}
+
+.botaoLocal {
+  flex: 1;
+  min-height: 180px;
+  border: 2px solid #182b25;
+  border-radius: 8px;
+  background: #fffdf7;
+  color: #182b25;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.botaoLocal:hover {
+  transform: translateY(-3px);
+  background: #1f5947;
+  color: #fffdf7;
+}
+
+.botaoLocal:focus-visible {
+  outline: 4px solid #c85d35;
+  outline-offset: 4px;
+}
+
+@media (max-width: 560px) {
+  .opcoesLocal {
+    flex-direction: column;
+  }
+
+  .botaoLocal {
+    min-height: 140px;
+    font-size: 1.6rem;
+  }
+}
