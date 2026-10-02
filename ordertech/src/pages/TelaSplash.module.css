@@ -1,0 +1,47 @@
+
+.tela-splash {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b1b3d;
+  color: white;
+  cursor: pointer;
+}
+
+.banner-placeholder {
+  width: min(80%, 320px);
+  height: min(58vh, 560px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.banner-placeholder img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.texto-iniciar {
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: piscar 1.5s infinite;
+  text-align: center;
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@media (min-width: 600px) {
+  .texto-iniciar {
+    font-size: 1.75rem;
+  }
+}

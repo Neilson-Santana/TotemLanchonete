@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './TelaMenu.module.css';
 
@@ -116,24 +116,29 @@ export default function TelaMenu({
                 />
               ))}
             </div>
-          ) : !variacaoSelecionada ? (
-            <VariacaoProduto 
-              produtoAtivo={produtoAtivo} 
-              selecionarVariacao={selecionarVariacao} 
-              executarComAtraso={executarComAtraso} 
-              setProdutoAtivo={setProdutoAtivo} 
-            />
           ) : (
-            <QuantidadeProduto 
-              produtoAtivo={produtoAtivo} 
-              variacaoSelecionada={variacaoSelecionada} 
-              quantidade={quantidade} 
-              setQuantidade={setQuantidade} 
-              executarComAtraso={executarComAtraso} 
-              setVariacaoSelecionada={setVariacaoSelecionada} 
-              setProdutoAtivo={setProdutoAtivo} 
-              adicionarAoCarrinho={adicionarAoCarrinho} 
-            />
+            <div className={styles['detalhe-produto']}>
+              <img className={styles['imagem-detalhe']} src={produtoAtivo.image} alt={produtoAtivo.name} />
+              {!variacaoSelecionada ? (
+                <VariacaoProduto
+                  produtoAtivo={produtoAtivo}
+                  selecionarVariacao={selecionarVariacao}
+                  executarComAtraso={executarComAtraso}
+                  setProdutoAtivo={setProdutoAtivo}
+                />
+              ) : (
+                <QuantidadeProduto
+                  produtoAtivo={produtoAtivo}
+                  variacaoSelecionada={variacaoSelecionada}
+                  quantidade={quantidade}
+                  setQuantidade={setQuantidade}
+                  executarComAtraso={executarComAtraso}
+                  setVariacaoSelecionada={setVariacaoSelecionada}
+                  setProdutoAtivo={setProdutoAtivo}
+                  adicionarAoCarrinho={adicionarAoCarrinho}
+                />
+              )}
+            </div>
           )}
         </div>
       </div>

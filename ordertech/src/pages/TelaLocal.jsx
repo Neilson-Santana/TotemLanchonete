@@ -13,7 +13,7 @@ function TelaLocal({ setLocal }) {
                         navegar('/menu');
                     }}
                 >
-                    Comer Aqui
+                    🪑 <p>Comer Aqui</p>
                 </button>
                 <button className={styles.botaoLocal}
                     onClick={() => {
@@ -21,7 +21,7 @@ function TelaLocal({ setLocal }) {
                         navegar('/menu');
                     }}
                 >
-                    Levar
+                    🍔 <p>Levar</p>
                 </button>
             </div>
         </main>

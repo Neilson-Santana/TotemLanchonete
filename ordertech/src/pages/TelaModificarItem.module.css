@@ -1,0 +1,108 @@
+
+.tela-review {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #426d91;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.quantity-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.produto-img {
+  width: min(80vw, 280px);
+  height: 210px;
+  display: grid;
+  place-items: center;
+  margin: 12px 0 24px;
+  overflow: hidden;
+  border: 1px solid #d8e1d9;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.produto-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #426d91;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.btn-qty {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #3c6a91;
+  background-color: #27427e;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-qty:active {
+  transform: scale(0.9);
+}
+
+.qty-display {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 50px;
+}
+
+.quantity-actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.btn-adicionar {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #1d3557;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #c00;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-voltar-inline {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-adicionar:active, .btn-cancelar:active, .btn-voltar-inline:active {
+  transform: scale(0.95);
+}
